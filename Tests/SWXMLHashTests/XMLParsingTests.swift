@@ -30,34 +30,277 @@ import XCTest
 
 class XMLParsingTests: XCTestCase {
     let xmlToParse = """
-        <root>
-          <header>header mixed content<title>Test Title Header</title>more mixed content</header>
-          <catalog>
-            <book id=\"bk101\">
-              <author>Gambardella, Matthew</author>
-              <title>XML Developer's Guide</title>
-              <genre>Computer</genre><price>44.95</price>
-              <publish_date>2000-10-01</publish_date>
-              <description>An in-depth look at creating applications with XML.</description>
-            </book>
-            <book id=\"bk102\">
-              <author>Ralls, Kim</author>
-              <title>Midnight Rain</title>
-              <genre>Fantasy</genre>
-              <price>5.95</price>
-              <publish_date>2000-12-16</publish_date>
-              <description>A former architect battles corporate zombies, an evil sorceress, and her own childhood to become queen of the world.</description>
-            </book>
-            <book id=\"bk103\">
-              <author>Corets, Eva</author>
-              <title>Maeve Ascendant</title>
-              <genre>Fantasy</genre>
-              <price>5.95</price>
-              <publish_date>2000-11-17</publish_date>
-              <description>After the collapse of a nanotechnology society in England, the young survivors lay the foundation for a new society.</description>
-            </book>
-          </catalog>
-        </root>
+    <?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title><![CDATA[All jobs | upwork.com]]></title><link><![CDATA[https://www.upwork.com/ab/feed/jobs/rss?subcategory2=game_development]]></link><description><![CDATA[All jobs as of January 16, 2018 06:41 UTC]]></description><language>en-us</language><pubDate>Tue, 16 Jan 2018 06:41:40 +0000</pubDate><copyright>© 2003-2018 Upwork Corporation</copyright><docs>http://blogs.law.harvard.edu/tech/rss</docs><generator>Upwork Corporation</generator><managingEditor>rss@upwork.com (Upwork Corporation)</managingEditor><image><url>https://www.upwork.com/images/rss_logo.png</url><title><![CDATA[All jobs | upwork.com]]></title><link><![CDATA[https://www.upwork.com/ab/feed/jobs/rss?subcategory2=game_development]]></link></image><item><title><![CDATA[Transcribe audio interviews - Upwork]]></title><link>https://www.upwork.com/jobs/Transcribe-audio-interviews_%7E01e0810bc891ed31f9?source=rss</link><description><![CDATA[Transcribe 50 minutes of audio files from an interview<br /><br />
+    The result should be three microsoft word files, one per each audio file and have timestamped question/answer pairs that look like:<br /><br />
+    1:32<br />
+    Sidd: &amp;quot; so my question is ...&amp;quot;<br />
+    Interviewee: &amp;quot; my answer is ...&amp;quot;<br /><br /><br />
+    3:45<br />
+    Sidd: &amp;quot; so my next question is ...&amp;quot;<br />
+    Interviewee: &amp;quot; my answer is ...&amp;quot;<br /><br />
+    If there is a word that you do not understand, please put your best guess highlighted it in yellow prefixed with a &amp;quot;?&amp;quot; and&nbsp;&nbsp;put a time marker in parentheses.<br /><br />
+    ex.&nbsp;&nbsp;(begin highlighting in yellow) (? cyber security @ 3:14) (end highlighting in yellow)<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Admin Support &gt; Transcription
+    <br /><b>Skills</b>:        Transcription            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Transcribe-audio-interviews_%7E01e0810bc891ed31f9?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Transcribe 50 minutes of audio files from an interview<br /><br />
+    The result should be three microsoft word files, one per each audio file and have timestamped question/answer pairs that look like:<br /><br />
+    1:32<br />
+    Sidd: &amp;quot; so my question is ...&amp;quot;<br />
+    Interviewee: &amp;quot; my answer is ...&amp;quot;<br /><br /><br />
+    3:45<br />
+    Sidd: &amp;quot; so my next question is ...&amp;quot;<br />
+    Interviewee: &amp;quot; my answer is ...&amp;quot;<br /><br />
+    If there is a word that you do not understand, please put your best guess highlighted it in yellow prefixed with a &amp;quot;?&amp;quot; and&nbsp;&nbsp;put a time marker in parentheses.<br /><br />
+    ex.&nbsp;&nbsp;(begin highlighting in yellow) (? cyber security @ 3:14) (end highlighting in yellow)<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Admin Support &gt; Transcription
+    <br /><b>Skills</b>:        Transcription            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Transcribe-audio-interviews_%7E01e0810bc891ed31f9?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:35:25 +0000</pubDate><guid>https://www.upwork.com/jobs/Transcribe-audio-interviews_%7E01e0810bc891ed31f9?source=rss</guid></item><item><title><![CDATA[Help with homepage and product page design on Shopify - Upwork]]></title><link>https://www.upwork.com/jobs/Help-with-homepage-and-product-page-design-Shopify_%7E01c8e4a547c5f97b08?source=rss</link><description><![CDATA[Hello! I&#039;m looking for a frontend designer who can help with making our homepage and product pages look great. <br /><br />
+    We have a list of things we need to add to the product page, and we need some design inspiration for the homepage.&nbsp;&nbsp;We can provide a list of influential imagery to show the theme we&#039;re going for.<br /><br />
+    We are already using the Motion template: http://archetypethemes.co/blogs/motion . The goal would be to build off of it and try to maintain branding.<br /><br />
+    Preferably this person / agency would have an understand of art.&nbsp;&nbsp;We have everything from fine art, animation art, comic art, abstract art, etc.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Ecommerce Development
+    <br /><b>Skills</b>:        CSS,                     Graphic Design,                     HTML,                     HTML5,                     JavaScript,                     Shopify,                     Shopify Templates,                     Web Design            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Help-with-homepage-and-product-page-design-Shopify_%7E01c8e4a547c5f97b08?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Hello! I&#039;m looking for a frontend designer who can help with making our homepage and product pages look great. <br /><br />
+    We have a list of things we need to add to the product page, and we need some design inspiration for the homepage.&nbsp;&nbsp;We can provide a list of influential imagery to show the theme we&#039;re going for.<br /><br />
+    We are already using the Motion template: http://archetypethemes.co/blogs/motion . The goal would be to build off of it and try to maintain branding.<br /><br />
+    Preferably this person / agency would have an understand of art.&nbsp;&nbsp;We have everything from fine art, animation art, comic art, abstract art, etc.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Ecommerce Development
+    <br /><b>Skills</b>:        CSS,                     Graphic Design,                     HTML,                     HTML5,                     JavaScript,                     Shopify,                     Shopify Templates,                     Web Design            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Help-with-homepage-and-product-page-design-Shopify_%7E01c8e4a547c5f97b08?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:34:12 +0000</pubDate><guid>https://www.upwork.com/jobs/Help-with-homepage-and-product-page-design-Shopify_%7E01c8e4a547c5f97b08?source=rss</guid></item><item><title><![CDATA[PH VA wanted with Telecom experience/ QA call center - Upwork]]></title><link>https://www.upwork.com/jobs/wanted-with-Telecom-experience-call-center_%7E014dde59801f07862b?source=rss</link><description><![CDATA[We are looking for a VA from PH. You must have QA and telecom experience. And Work US daytime. Be good with ADMIN tasks. And have no excuses.&nbsp;&nbsp;And nothing that takes you from this job. If your kids or family affect your work do not apply.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Admin Support &gt; Personal / Virtual Assistant
+    <br /><b>Skills</b>:        Administrative Support,                     Spreadsheets,                     Telecommunications Engineering,                     Trans Continental Technologies Predictive Dialer,                     Virtual Assistant            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/wanted-with-Telecom-experience-call-center_%7E014dde59801f07862b?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[We are looking for a VA from PH. You must have QA and telecom experience. And Work US daytime. Be good with ADMIN tasks. And have no excuses.&nbsp;&nbsp;And nothing that takes you from this job. If your kids or family affect your work do not apply.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Admin Support &gt; Personal / Virtual Assistant
+    <br /><b>Skills</b>:        Administrative Support,                     Spreadsheets,                     Telecommunications Engineering,                     Trans Continental Technologies Predictive Dialer,                     Virtual Assistant            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/wanted-with-Telecom-experience-call-center_%7E014dde59801f07862b?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:34:07 +0000</pubDate><guid>https://www.upwork.com/jobs/wanted-with-Telecom-experience-call-center_%7E014dde59801f07862b?source=rss</guid></item><item><title><![CDATA[Android screenshots design - Upwork]]></title><link>https://www.upwork.com/jobs/Android-screenshots-design_%7E015cca91dd533bc819?source=rss</link><description><![CDATA[Design Android screenshots<br />
+    High level<br /><br />
+    This job was posted from a mobile device, so please pardon any typos or any missing details.<br /><br /><b>Budget</b>: $150
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Design &amp; Creative &gt; Graphic Design
+    <br /><b>Skills</b>:        Adobe Photoshop,                     Graphic Design,                     Illustration            <br /><b>Country</b>: Moldova<br /><a href="https://www.upwork.com/jobs/Android-screenshots-design_%7E015cca91dd533bc819?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Design Android screenshots<br />
+    High level<br /><br />
+    This job was posted from a mobile device, so please pardon any typos or any missing details.<br /><br /><b>Budget</b>: $150
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Design &amp; Creative &gt; Graphic Design
+    <br /><b>Skills</b>:        Adobe Photoshop,                     Graphic Design,                     Illustration            <br /><b>Country</b>: Moldova<br /><a href="https://www.upwork.com/jobs/Android-screenshots-design_%7E015cca91dd533bc819?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:33:30 +0000</pubDate><guid>https://www.upwork.com/jobs/Android-screenshots-design_%7E015cca91dd533bc819?source=rss</guid></item><item><title><![CDATA[(USA) React.js &amp;amp; Ruby on Rails development for new financial technology web app - Upwork]]></title><link>https://www.upwork.com/jobs/USA-React-amp-Ruby-Rails-development-for-new-financial-technology-web-app_%7E011ab3ef2f62f8c027?source=rss</link><description><![CDATA[I&#039;m looking for a great full stack developer with the following:<br /><br />
+    - Strong experience in React.js<br />
+    - Working knowledge and development ability with Ruby on Rails<br />
+    - Near full-time availability for the next 2 months (~30 hours/week)<br />
+    - Independent, good communicator<br /><br />
+    You&#039;ll be working to help me complete an MVP for a new web app that provides financial advice to users. Our design comps are built with Sketch, and we work out of JIRA.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Skills</b>:        CSS,                     HTML,                     React.js,                     Ruby on Rails            <br /><b>Location Requirement</b>: Only freelancers located in the United States may apply.
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/USA-React-amp-Ruby-Rails-development-for-new-financial-technology-web-app_%7E011ab3ef2f62f8c027?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I&#039;m looking for a great full stack developer with the following:<br /><br />
+    - Strong experience in React.js<br />
+    - Working knowledge and development ability with Ruby on Rails<br />
+    - Near full-time availability for the next 2 months (~30 hours/week)<br />
+    - Independent, good communicator<br /><br />
+    You&#039;ll be working to help me complete an MVP for a new web app that provides financial advice to users. Our design comps are built with Sketch, and we work out of JIRA.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Skills</b>:        CSS,                     HTML,                     React.js,                     Ruby on Rails            <br /><b>Location Requirement</b>: Only freelancers located in the United States may apply.
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/USA-React-amp-Ruby-Rails-development-for-new-financial-technology-web-app_%7E011ab3ef2f62f8c027?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:32:17 +0000</pubDate><guid>https://www.upwork.com/jobs/USA-React-amp-Ruby-Rails-development-for-new-financial-technology-web-app_%7E011ab3ef2f62f8c027?source=rss</guid></item><item><title><![CDATA[Writing Reviews of the Top 5 Over 50 Dating Sites - Upwork]]></title><link>https://www.upwork.com/jobs/Writing-Reviews-the-Top-Over-Dating-Sites_%7E0121b640a751828338?source=rss</link><description><![CDATA[I need a good writer help to write the reviews of top 5 over 50 dating websites. Requirements of this project as follows:<br /><br />
+    1. Websites:<br />
+    SeniorMatch.com<br />
+    OlderWomenDating.com<br />
+    OurTime.com<br />
+    eharmony.com/senior-dating<br />
+    elitesingles.com/over-50-dating<br /><br />
+    2. Each review should be unique and no less than 500 words;<br /><br />
+    Thanks.<br />
+    Bking<br /><br /><b>Budget</b>: $15
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Article &amp; Blog Writing
+    <br /><b>Skills</b>:        Article Writing,                     Content Writing,                     SEO Writing            <br /><a href="https://www.upwork.com/jobs/Writing-Reviews-the-Top-Over-Dating-Sites_%7E0121b640a751828338?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I need a good writer help to write the reviews of top 5 over 50 dating websites. Requirements of this project as follows:<br /><br />
+    1. Websites:<br />
+    SeniorMatch.com<br />
+    OlderWomenDating.com<br />
+    OurTime.com<br />
+    eharmony.com/senior-dating<br />
+    elitesingles.com/over-50-dating<br /><br />
+    2. Each review should be unique and no less than 500 words;<br /><br />
+    Thanks.<br />
+    Bking<br /><br /><b>Budget</b>: $15
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Article &amp; Blog Writing
+    <br /><b>Skills</b>:        Article Writing,                     Content Writing,                     SEO Writing            <br /><a href="https://www.upwork.com/jobs/Writing-Reviews-the-Top-Over-Dating-Sites_%7E0121b640a751828338?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:32:01 +0000</pubDate><guid>https://www.upwork.com/jobs/Writing-Reviews-the-Top-Over-Dating-Sites_%7E0121b640a751828338?source=rss</guid></item><item><title><![CDATA[Design and devlop a webpage - Upwork]]></title><link>https://www.upwork.com/jobs/Design-and-devlop-webpage_%7E01b64c513142dc30d1?source=rss</link><description><![CDATA[Design and devlop webpage. Devlop the user interface and user experiance. The project will involve extensive communication to insure that the best user experiance is delivered.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Country</b>: United Arab Emirates<br /><a href="https://www.upwork.com/jobs/Design-and-devlop-webpage_%7E01b64c513142dc30d1?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Design and devlop webpage. Devlop the user interface and user experiance. The project will involve extensive communication to insure that the best user experiance is delivered.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Country</b>: United Arab Emirates<br /><a href="https://www.upwork.com/jobs/Design-and-devlop-webpage_%7E01b64c513142dc30d1?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:31:52 +0000</pubDate><guid>https://www.upwork.com/jobs/Design-and-devlop-webpage_%7E01b64c513142dc30d1?source=rss</guid></item><item><title><![CDATA[Theology Academic Writing - ongoing - Upwork]]></title><link>https://www.upwork.com/jobs/Theology-Academic-Writing-ongoing_%7E01ad02832f974b2050?source=rss</link><description><![CDATA[I am seeking a passionate academic writer who is able to provide simple biblical commentaries on biblical passages.&nbsp;&nbsp;<br /><br />
+    The successful applicant must be able to write in a succinct manner that is direct and easy to interpret by all audiences.&nbsp;&nbsp;&nbsp;<br /><br />
+    The passages will be provided along with a suggested word count.&nbsp;&nbsp;<br /><br />
+    In some cases they will need to provide a short video clip to support the writing.&nbsp;&nbsp;<br /><br />
+    This job is an immediate start.<br /><br />
+    EG <br /><br />
+    The Conversion of Saul: Acts 1-22 and <br />
+    Paul&#039;s Ministry in Thessalonica: 1 Thessalonians 2: 1-16<br /><br />
+    Using your knowledge and understanding of St Paul explain how Paul was inspired to write many letters to the Christian communities he established.&nbsp;&nbsp;&nbsp;(200 words)&nbsp;&nbsp;<br /><br />
+    EG of Supporting Clip&nbsp;&nbsp;(note: the time length is 1.37mins)<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Academic Writing &amp; Research
+    <br /><b>Skills</b>:        Academic Writing,                     Catholic Theology,                     Theology            <br /><b>Country</b>: Australia<br /><a href="https://www.upwork.com/jobs/Theology-Academic-Writing-ongoing_%7E01ad02832f974b2050?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I am seeking a passionate academic writer who is able to provide simple biblical commentaries on biblical passages.&nbsp;&nbsp;<br /><br />
+    The successful applicant must be able to write in a succinct manner that is direct and easy to interpret by all audiences.&nbsp;&nbsp;&nbsp;<br /><br />
+    The passages will be provided along with a suggested word count.&nbsp;&nbsp;<br /><br />
+    In some cases they will need to provide a short video clip to support the writing.&nbsp;&nbsp;<br /><br />
+    This job is an immediate start.<br /><br />
+    EG <br /><br />
+    The Conversion of Saul: Acts 1-22 and <br />
+    Paul&#039;s Ministry in Thessalonica: 1 Thessalonians 2: 1-16<br /><br />
+    Using your knowledge and understanding of St Paul explain how Paul was inspired to write many letters to the Christian communities he established.&nbsp;&nbsp;&nbsp;(200 words)&nbsp;&nbsp;<br /><br />
+    EG of Supporting Clip&nbsp;&nbsp;(note: the time length is 1.37mins)<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Academic Writing &amp; Research
+    <br /><b>Skills</b>:        Academic Writing,                     Catholic Theology,                     Theology            <br /><b>Country</b>: Australia<br /><a href="https://www.upwork.com/jobs/Theology-Academic-Writing-ongoing_%7E01ad02832f974b2050?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:31:07 +0000</pubDate><guid>https://www.upwork.com/jobs/Theology-Academic-Writing-ongoing_%7E01ad02832f974b2050?source=rss</guid></item><item><title><![CDATA[Looking for a freelancer to promote my products to best sellers on Amazon India - Upwork]]></title><link>https://www.upwork.com/jobs/Looking-for-freelancer-promote-products-best-sellers-Amazon-India_%7E01ac589da5fc1633f9?source=rss</link><description><![CDATA[I need someone to promote some of our products on Amazon India. We have just started on Amazon selling mobile accessories and actively looking for some professional to get our products up in rankings asap.<br /><br /><b>Budget</b>: $100
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Admin Support &gt; Personal / Virtual Assistant
+    <br /><b>Country</b>: India<br /><a href="https://www.upwork.com/jobs/Looking-for-freelancer-promote-products-best-sellers-Amazon-India_%7E01ac589da5fc1633f9?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I need someone to promote some of our products on Amazon India. We have just started on Amazon selling mobile accessories and actively looking for some professional to get our products up in rankings asap.<br /><br /><b>Budget</b>: $100
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Admin Support &gt; Personal / Virtual Assistant
+    <br /><b>Country</b>: India<br /><a href="https://www.upwork.com/jobs/Looking-for-freelancer-promote-products-best-sellers-Amazon-India_%7E01ac589da5fc1633f9?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:31:04 +0000</pubDate><guid>https://www.upwork.com/jobs/Looking-for-freelancer-promote-products-best-sellers-Amazon-India_%7E01ac589da5fc1633f9?source=rss</guid></item><item><title><![CDATA[I am looking for a specialist in SEO, SMO, SMM - Upwork]]></title><link>https://www.upwork.com/jobs/looking-for-specialist-SEO-SMO-SMM_%7E01d6538ee469e51711?source=rss</link><description><![CDATA[Looking for someone to optimize website and perform related marketing on all social media accounts<br /><br />
+    This job was posted from a mobile device, so please pardon any typos or any missing details.<br /><br /><b>Budget</b>: $150
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Sales &amp; Marketing &gt; SMM - Social Media Marketing
+    <br /><b>Country</b>: Seychelles<br /><a href="https://www.upwork.com/jobs/looking-for-specialist-SEO-SMO-SMM_%7E01d6538ee469e51711?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Looking for someone to optimize website and perform related marketing on all social media accounts<br /><br />
+    This job was posted from a mobile device, so please pardon any typos or any missing details.<br /><br /><b>Budget</b>: $150
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Sales &amp; Marketing &gt; SMM - Social Media Marketing
+    <br /><b>Country</b>: Seychelles<br /><a href="https://www.upwork.com/jobs/looking-for-specialist-SEO-SMO-SMM_%7E01d6538ee469e51711?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:30:59 +0000</pubDate><guid>https://www.upwork.com/jobs/looking-for-specialist-SEO-SMO-SMM_%7E01d6538ee469e51711?source=rss</guid></item><item><title><![CDATA[Wordpress Site - SMTP/Randomizing emails help needed - Upwork]]></title><link>https://www.upwork.com/jobs/Wordpress-Site-SMTP-Randomizing-emails-help-needed_%7E0151cb3cac2c55da2b?source=rss</link><description><![CDATA[I&#039;m running a Wordpress job board site right now (Jobify theme/WP Job Manager).<br /><br />
+    I want my job applicants to be able to post job applications to Craigslist&#039;s anonymous emails (ex: 4wbgz-6450736698@job.craigslist.org )<br /><br />
+    The problem is all of the emails will be sent from my server from the same email address, and Craigslist will likely ban me due to too much activity.<br /><br />
+    Is there a system I can setup to randomize emails/SMTP servers so I can circumvent this issue?<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Wordpress-Site-SMTP-Randomizing-emails-help-needed_%7E0151cb3cac2c55da2b?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I&#039;m running a Wordpress job board site right now (Jobify theme/WP Job Manager).<br /><br />
+    I want my job applicants to be able to post job applications to Craigslist&#039;s anonymous emails (ex: 4wbgz-6450736698@job.craigslist.org )<br /><br />
+    The problem is all of the emails will be sent from my server from the same email address, and Craigslist will likely ban me due to too much activity.<br /><br />
+    Is there a system I can setup to randomize emails/SMTP servers so I can circumvent this issue?<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Wordpress-Site-SMTP-Randomizing-emails-help-needed_%7E0151cb3cac2c55da2b?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:30:19 +0000</pubDate><guid>https://www.upwork.com/jobs/Wordpress-Site-SMTP-Randomizing-emails-help-needed_%7E0151cb3cac2c55da2b?source=rss</guid></item><item><title><![CDATA[Developer - Upwork]]></title><link>https://www.upwork.com/jobs/Developer_%7E017c9918e9a397d5a8?source=rss</link><description><![CDATA[I need an e-commerce site developed that has a heavy social aspect that will allow people to communicate.<br /><br /><b>Budget</b>: $15,000
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Ecommerce Development
+    <br /><b>Skills</b>:        CSS,                     PHP,                     PSD to HTML,                     PSD to Wordpress,                     WordPress            <br /><b>Location Requirement</b>: Only freelancers located in the United States may apply.
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Developer_%7E017c9918e9a397d5a8?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I need an e-commerce site developed that has a heavy social aspect that will allow people to communicate.<br /><br /><b>Budget</b>: $15,000
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Ecommerce Development
+    <br /><b>Skills</b>:        CSS,                     PHP,                     PSD to HTML,                     PSD to Wordpress,                     WordPress            <br /><b>Location Requirement</b>: Only freelancers located in the United States may apply.
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Developer_%7E017c9918e9a397d5a8?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:30:09 +0000</pubDate><guid>https://www.upwork.com/jobs/Developer_%7E017c9918e9a397d5a8?source=rss</guid></item><item><title><![CDATA[Install the latest version of Bitnami Magento WAMP Stack on Windows 10 computer - Upwork]]></title><link>https://www.upwork.com/jobs/Install-the-latest-version-Bitnami-Magento-WAMP-Stack-Windows-computer_%7E01a6e085d8a9ef6125?source=rss</link><description><![CDATA[Hi Mike,<br /><br />
+    I would like to install the latest version of Bitnami Magento WAMP Stack on my Windows 10 computer.&nbsp;&nbsp;Will you be available to help me with this phase of the project and how much will you be charging?&nbsp;&nbsp;<br /><br />
+    After this phase other phases will be forthcoming, but each will be discussed separately at a later time.<br /><br />
+    Thank you for your response,<br /><br />
+    Eli<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Ecommerce Development
+    <br /><b>Skills</b>:        Magento,                     Magento 2,                     OpenCart,                     PHP,                     WordPress            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Install-the-latest-version-Bitnami-Magento-WAMP-Stack-Windows-computer_%7E01a6e085d8a9ef6125?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Hi Mike,<br /><br />
+    I would like to install the latest version of Bitnami Magento WAMP Stack on my Windows 10 computer.&nbsp;&nbsp;Will you be available to help me with this phase of the project and how much will you be charging?&nbsp;&nbsp;<br /><br />
+    After this phase other phases will be forthcoming, but each will be discussed separately at a later time.<br /><br />
+    Thank you for your response,<br /><br />
+    Eli<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Ecommerce Development
+    <br /><b>Skills</b>:        Magento,                     Magento 2,                     OpenCart,                     PHP,                     WordPress            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Install-the-latest-version-Bitnami-Magento-WAMP-Stack-Windows-computer_%7E01a6e085d8a9ef6125?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:29:31 +0000</pubDate><guid>https://www.upwork.com/jobs/Install-the-latest-version-Bitnami-Magento-WAMP-Stack-Windows-computer_%7E01a6e085d8a9ef6125?source=rss</guid></item><item><title><![CDATA[Article contribution for B2B website on authoritative websites. - Upwork]]></title><link>https://www.upwork.com/jobs/Article-contribution-for-B2B-website-authoritative-websites_%7E01f196cd3d400ec775?source=rss</link><description><![CDATA[Contributing articles on authoritative websites.<br /><br /><b>Budget</b>: $100
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Web Content
+    <br /><b>Skills</b>:        Article Writing,                     Content Writing,                     Copywriting,                     Press Release Writing,                     Product Descriptions            <br /><b>Country</b>: India<br /><a href="https://www.upwork.com/jobs/Article-contribution-for-B2B-website-authoritative-websites_%7E01f196cd3d400ec775?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Contributing articles on authoritative websites.<br /><br /><b>Budget</b>: $100
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Web Content
+    <br /><b>Skills</b>:        Article Writing,                     Content Writing,                     Copywriting,                     Press Release Writing,                     Product Descriptions            <br /><b>Country</b>: India<br /><a href="https://www.upwork.com/jobs/Article-contribution-for-B2B-website-authoritative-websites_%7E01f196cd3d400ec775?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:28:35 +0000</pubDate><guid>https://www.upwork.com/jobs/Article-contribution-for-B2B-website-authoritative-websites_%7E01f196cd3d400ec775?source=rss</guid></item><item><title><![CDATA[High end video production with motion graphics and stockvideo - Upwork]]></title><link>https://www.upwork.com/jobs/High-end-video-production-with-motion-graphics-and-stockvideo_%7E0149f57231ccfb836c?source=rss</link><description><![CDATA[KennedyFitch is a premier management consulting and executive search company working for large corporates globally. We are developing a new service and will want to build a sequence of 3-4 video&#039;s. Script is avaiable and thoughts about content, duration, look and feel are well developed. We are looking for &amp;quot;high-end&amp;quot; qualiyt and project management<br /><br />
+    Here 2 examples of video&#039;s that are in terms of graphics and quality close to our expectations<br />
+    https://www.youtube.com/watch?v=DL99deFJYaI&amp;amp;index=9&amp;amp;list=PLanVbnXDg2UZ33NTm9vcddWLra3zAapdk&nbsp;&nbsp;(and look at the sequences without the presenter)<br />
+    https://m.youtube.com/watch?v=9T9q49yR0PA<br /><br />
+    Upon hiring we will ask you to sing a non-disclosure agreement and upn approval, we will make the script avaialble<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Design &amp; Creative &gt; Video Production
+    <br /><b>Skills</b>:        Video Editing,                     Video Production            <br /><b>Country</b>: Cyprus<br /><a href="https://www.upwork.com/jobs/High-end-video-production-with-motion-graphics-and-stockvideo_%7E0149f57231ccfb836c?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[KennedyFitch is a premier management consulting and executive search company working for large corporates globally. We are developing a new service and will want to build a sequence of 3-4 video&#039;s. Script is avaiable and thoughts about content, duration, look and feel are well developed. We are looking for &amp;quot;high-end&amp;quot; qualiyt and project management<br /><br />
+    Here 2 examples of video&#039;s that are in terms of graphics and quality close to our expectations<br />
+    https://www.youtube.com/watch?v=DL99deFJYaI&amp;amp;index=9&amp;amp;list=PLanVbnXDg2UZ33NTm9vcddWLra3zAapdk&nbsp;&nbsp;(and look at the sequences without the presenter)<br />
+    https://m.youtube.com/watch?v=9T9q49yR0PA<br /><br />
+    Upon hiring we will ask you to sing a non-disclosure agreement and upn approval, we will make the script avaialble<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Design &amp; Creative &gt; Video Production
+    <br /><b>Skills</b>:        Video Editing,                     Video Production            <br /><b>Country</b>: Cyprus<br /><a href="https://www.upwork.com/jobs/High-end-video-production-with-motion-graphics-and-stockvideo_%7E0149f57231ccfb836c?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:28:33 +0000</pubDate><guid>https://www.upwork.com/jobs/High-end-video-production-with-motion-graphics-and-stockvideo_%7E0149f57231ccfb836c?source=rss</guid></item><item><title><![CDATA[Seeking virtual personal assistant for personal tasks &amp;amp; some research - Upwork]]></title><link>https://www.upwork.com/jobs/Seeking-virtual-personal-assistant-for-personal-tasks-amp-some-research_%7E0150b066ef8b6816a8?source=rss</link><description><![CDATA[I need someone on a week-long trial basis to act as a personal virtual assistant for <br />
+    general research, <br />
+    scheduling, <br />
+    administrative tasks,<br />
+    research,<br />
+    booking appointments,<br />
+    making inquiry calls,<br />
+    travel research,<br />
+    email management,<br />
+    and general support tasks. <br /><br />
+    Time commitment at this stage will be minimal (1-3 hours/week) but will increase over the year. Seeking someone for the next 6-8 months if the right candidate is found.<br /><br />
+    I am a full-time student, full-time worker, volunteer, and attempting various personal projects this year, and so am seeking support to help manage my life and reduce my time expenditure on delegatable tasks.<br /><br />
+    I am seeking someone with excellent English skills, a method of contacting Australian phone numbers during business hours (will be an occasional task, not frequent), and able to deal with the majority of tasks in a 12-24 hour timeframe depending on urgency. At this stage, I anticipate that the vast majority will involve research, whether online or via phone. <br /><br />
+    You will be reliable, punctual, and thorough. The tasks are not terribly complicated - examples may be found at &#039;https://okayrelax.com/task-ideas&#039; under &#039;Personal&#039;, but it is imperative that you respond within a reasonable timeframe.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Admin Support &gt; Personal / Virtual Assistant
+    <br /><b>Country</b>: Australia<br /><a href="https://www.upwork.com/jobs/Seeking-virtual-personal-assistant-for-personal-tasks-amp-some-research_%7E0150b066ef8b6816a8?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I need someone on a week-long trial basis to act as a personal virtual assistant for <br />
+    general research, <br />
+    scheduling, <br />
+    administrative tasks,<br />
+    research,<br />
+    booking appointments,<br />
+    making inquiry calls,<br />
+    travel research,<br />
+    email management,<br />
+    and general support tasks. <br /><br />
+    Time commitment at this stage will be minimal (1-3 hours/week) but will increase over the year. Seeking someone for the next 6-8 months if the right candidate is found.<br /><br />
+    I am a full-time student, full-time worker, volunteer, and attempting various personal projects this year, and so am seeking support to help manage my life and reduce my time expenditure on delegatable tasks.<br /><br />
+    I am seeking someone with excellent English skills, a method of contacting Australian phone numbers during business hours (will be an occasional task, not frequent), and able to deal with the majority of tasks in a 12-24 hour timeframe depending on urgency. At this stage, I anticipate that the vast majority will involve research, whether online or via phone. <br /><br />
+    You will be reliable, punctual, and thorough. The tasks are not terribly complicated - examples may be found at &#039;https://okayrelax.com/task-ideas&#039; under &#039;Personal&#039;, but it is imperative that you respond within a reasonable timeframe.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Admin Support &gt; Personal / Virtual Assistant
+    <br /><b>Country</b>: Australia<br /><a href="https://www.upwork.com/jobs/Seeking-virtual-personal-assistant-for-personal-tasks-amp-some-research_%7E0150b066ef8b6816a8?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:27:12 +0000</pubDate><guid>https://www.upwork.com/jobs/Seeking-virtual-personal-assistant-for-personal-tasks-amp-some-research_%7E0150b066ef8b6816a8?source=rss</guid></item><item><title><![CDATA[IDXBroker developer - Upwork]]></title><link>https://www.upwork.com/jobs/IDXBroker-developer_%7E0182040ea937a1ceea?source=rss</link><description><![CDATA[Looking to build the Wordpress Integration with IDXBroker<br />
+    Must be expert in IDXBroker customization<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/IDXBroker-developer_%7E0182040ea937a1ceea?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Looking to build the Wordpress Integration with IDXBroker<br />
+    Must be expert in IDXBroker customization<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/IDXBroker-developer_%7E0182040ea937a1ceea?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:26:45 +0000</pubDate><guid>https://www.upwork.com/jobs/IDXBroker-developer_%7E0182040ea937a1ceea?source=rss</guid></item><item><title><![CDATA[Social media manager - Upwork]]></title><link>https://www.upwork.com/jobs/Social-media-manager_%7E01d355cb7f497f2d6d?source=rss</link><description><![CDATA[I&#039;d like to invite you to apply to my job. Please review this job post and apply if you&#039;re available.<br /><br />
+    But I would like to know first who you manage and the process you follow. I would like to do a trial with you but I would like to know more about how you operate.<br /><br />
+    About me:<br />
+    I have 3 instagram handles; eatwelltraveleverywhere, style_eatwelltraveleverywhere and food_eatwelltraveleverywhere<br /><br />
+    I&#039;m looking for someone to manage liking, commenting and engaging with new accounts. I will eventually also have this person manage posting and writing my posts too.<br /><br />
+    Then I would like to have this person work on the same thing for Pinterest and schedule comments and posts for me in Twitter.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Sales &amp; Marketing &gt; SMM - Social Media Marketing
+    <br /><b>Skills</b>:        Adobe Photoshop,                     Facebook Marketing,                     HootSuite,                     Instagram Marketing,                     MailChimp,                     Pinterest Marketing,                     Social Media Management            <br /><b>Country</b>: Australia<br /><a href="https://www.upwork.com/jobs/Social-media-manager_%7E01d355cb7f497f2d6d?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I&#039;d like to invite you to apply to my job. Please review this job post and apply if you&#039;re available.<br /><br />
+    But I would like to know first who you manage and the process you follow. I would like to do a trial with you but I would like to know more about how you operate.<br /><br />
+    About me:<br />
+    I have 3 instagram handles; eatwelltraveleverywhere, style_eatwelltraveleverywhere and food_eatwelltraveleverywhere<br /><br />
+    I&#039;m looking for someone to manage liking, commenting and engaging with new accounts. I will eventually also have this person manage posting and writing my posts too.<br /><br />
+    Then I would like to have this person work on the same thing for Pinterest and schedule comments and posts for me in Twitter.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Sales &amp; Marketing &gt; SMM - Social Media Marketing
+    <br /><b>Skills</b>:        Adobe Photoshop,                     Facebook Marketing,                     HootSuite,                     Instagram Marketing,                     MailChimp,                     Pinterest Marketing,                     Social Media Management            <br /><b>Country</b>: Australia<br /><a href="https://www.upwork.com/jobs/Social-media-manager_%7E01d355cb7f497f2d6d?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:26:45 +0000</pubDate><guid>https://www.upwork.com/jobs/Social-media-manager_%7E01d355cb7f497f2d6d?source=rss</guid></item><item><title><![CDATA[Salesman for my marketing agency - Upwork]]></title><link>https://www.upwork.com/jobs/Salesman-for-marketing-agency_%7E0175bcc7f723ad6a47?source=rss</link><description><![CDATA[Help me get $2000-$15000 clients for my marketing agency from anywhere in the United States. I&rsquo;ll give you access to the best training by a 7 figure marketing agnecy and resources I have for you to get clients the easiest and most productive way.<br /><br />
+    This job was posted from a mobile device, so please pardon any typos or any missing details.<br /><br /><b>Budget</b>: $1,000
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Sales &amp; Marketing &gt; Public Relations
+    <br /><b>Skills</b>:        Facebook Marketing,                     Internet Research,                     Marketing Automation,                     Marketing Communications,                     Marketing Strategy,                     Media Relations,                     Online Community Management,                     Public Relations,                     Sales Management            <br /><b>Location Requirement</b>: Only freelancers located in the United States may apply.
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Salesman-for-marketing-agency_%7E0175bcc7f723ad6a47?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Help me get $2000-$15000 clients for my marketing agency from anywhere in the United States. I&rsquo;ll give you access to the best training by a 7 figure marketing agnecy and resources I have for you to get clients the easiest and most productive way.<br /><br />
+    This job was posted from a mobile device, so please pardon any typos or any missing details.<br /><br /><b>Budget</b>: $1,000
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Sales &amp; Marketing &gt; Public Relations
+    <br /><b>Skills</b>:        Facebook Marketing,                     Internet Research,                     Marketing Automation,                     Marketing Communications,                     Marketing Strategy,                     Media Relations,                     Online Community Management,                     Public Relations,                     Sales Management            <br /><b>Location Requirement</b>: Only freelancers located in the United States may apply.
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Salesman-for-marketing-agency_%7E0175bcc7f723ad6a47?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:26:39 +0000</pubDate><guid>https://www.upwork.com/jobs/Salesman-for-marketing-agency_%7E0175bcc7f723ad6a47?source=rss</guid></item><item><title><![CDATA[Affiliate and Rewards Functionality Integration WordPress - Upwork]]></title><link>https://www.upwork.com/jobs/Affiliate-and-Rewards-Functionality-Integration-WordPress_%7E013827d4efa64e7daa?source=rss</link><description><![CDATA[We are looking for some who has worked with Affiliate links in Wordpress and can connect it with the rewards and registration process that we have.<br /><br />
+    As well, speed up the website as something is slowing it down.<br /><br />
+    Preferred if you can work 8am to 9pm Pacific Time Zone<br /><br /><b>Budget</b>: $300
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Skills</b>:        CSS,                     HTML5,                     JavaScript,                     PHP,                     Website Development,                     WordPress            <br /><b>Country</b>: Canada<br /><a href="https://www.upwork.com/jobs/Affiliate-and-Rewards-Functionality-Integration-WordPress_%7E013827d4efa64e7daa?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[We are looking for some who has worked with Affiliate links in Wordpress and can connect it with the rewards and registration process that we have.<br /><br />
+    As well, speed up the website as something is slowing it down.<br /><br />
+    Preferred if you can work 8am to 9pm Pacific Time Zone<br /><br /><b>Budget</b>: $300
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Skills</b>:        CSS,                     HTML5,                     JavaScript,                     PHP,                     Website Development,                     WordPress            <br /><b>Country</b>: Canada<br /><a href="https://www.upwork.com/jobs/Affiliate-and-Rewards-Functionality-Integration-WordPress_%7E013827d4efa64e7daa?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:26:12 +0000</pubDate><guid>https://www.upwork.com/jobs/Affiliate-and-Rewards-Functionality-Integration-WordPress_%7E013827d4efa64e7daa?source=rss</guid></item><item><title><![CDATA[Present word document in a different format - Upwork]]></title><link>https://www.upwork.com/jobs/Present-word-document-different-format_%7E015bcca62b404dc961?source=rss</link><description><![CDATA[Hi, <br />
+    I have a property condition report which I need to be reformatted. Right now it is presented in a word document and I need it to be formatted in the same way as the attached two PDFs. I What I mean by this is that there is a section for the tenants to &amp;quot;Tick&amp;quot; if they agree or not with what is stated.<br /><br />
+    My preference is to end up with a result similar to &amp;quot;sample condition report&amp;quot;.pdf but using the word doc information.<br /><br /><b>Budget</b>: $8
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Resumes &amp; Cover Letters
+    <br /><b>Skills</b>:        Microsoft Word            <br /><b>Country</b>: Australia<br /><a href="https://www.upwork.com/jobs/Present-word-document-different-format_%7E015bcca62b404dc961?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Hi, <br />
+    I have a property condition report which I need to be reformatted. Right now it is presented in a word document and I need it to be formatted in the same way as the attached two PDFs. I What I mean by this is that there is a section for the tenants to &amp;quot;Tick&amp;quot; if they agree or not with what is stated.<br /><br />
+    My preference is to end up with a result similar to &amp;quot;sample condition report&amp;quot;.pdf but using the word doc information.<br /><br /><b>Budget</b>: $8
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Resumes &amp; Cover Letters
+    <br /><b>Skills</b>:        Microsoft Word            <br /><b>Country</b>: Australia<br /><a href="https://www.upwork.com/jobs/Present-word-document-different-format_%7E015bcca62b404dc961?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:26:10 +0000</pubDate><guid>https://www.upwork.com/jobs/Present-word-document-different-format_%7E015bcca62b404dc961?source=rss</guid></item><item><title><![CDATA[TLO Expert - Upwork]]></title><link>https://www.upwork.com/jobs/TLO-Expert_%7E0176edf1ab2f19010b?source=rss</link><description><![CDATA[Looking for someone that has a &ldquo;TLO&rdquo; account . I need to locate certain home owners&nbsp;&nbsp;and there family members. The homeowners have assets that they need to be made aware of.<br /><br />
+    This job was posted from a mobile device, so please pardon any typos or any missing details.<br /><br /><b>Budget</b>: $100
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Data Science &amp; Analytics &gt; Data Extraction / ETL
+    <br /><b>Skills</b>:        Data Scraping            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/TLO-Expert_%7E0176edf1ab2f19010b?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Looking for someone that has a &ldquo;TLO&rdquo; account . I need to locate certain home owners&nbsp;&nbsp;and there family members. The homeowners have assets that they need to be made aware of.<br /><br />
+    This job was posted from a mobile device, so please pardon any typos or any missing details.<br /><br /><b>Budget</b>: $100
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Data Science &amp; Analytics &gt; Data Extraction / ETL
+    <br /><b>Skills</b>:        Data Scraping            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/TLO-Expert_%7E0176edf1ab2f19010b?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:26:08 +0000</pubDate><guid>https://www.upwork.com/jobs/TLO-Expert_%7E0176edf1ab2f19010b?source=rss</guid></item><item><title><![CDATA[Listing Web App using PHP - Upwork]]></title><link>https://www.upwork.com/jobs/Listing-Web-App-using-PHP_%7E01dbdb8879c716ad9f?source=rss</link><description><![CDATA[You need to develop a PHP/MySQL/JQUERY/AJAX based web application with following functions using standard Twitter Bootstrap them.&nbsp;&nbsp;You need to design using OOP approach.&nbsp;&nbsp;This is a first step of larger project. <br /><br />
+    1.&nbsp;&nbsp;User Sign up and Login ( along with Facebook and Twitter)<br />
+    2. User Profile Page with edit option along my list, change profile,&nbsp;&nbsp;change password<br />
+    3. Create a Product Listing by user including image upload along with Edit and Delete function <br />
+    4. A Product List Page with filtering options ( paginated) <br />
+    5. Admin module with option to add/edit/delete a product listing, add/delete users, tag a product listing as featured, add product category options<br />
+    6. Home Page with Search option, featured product, category of products with link to the list of the products.&nbsp;&nbsp;<br /><br />
+    These are the requirements of Phase 1 of this multiple phases of this product.&nbsp;&nbsp;Design themes shall be provided.<br /><br /><b>Budget</b>: $30
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Skills</b>:        AJAX,                     Facebook Development,                     HTML5,                     JavaScript,                     jQuery,                     PHP,                     SQL            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Listing-Web-App-using-PHP_%7E01dbdb8879c716ad9f?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[You need to develop a PHP/MySQL/JQUERY/AJAX based web application with following functions using standard Twitter Bootstrap them.&nbsp;&nbsp;You need to design using OOP approach.&nbsp;&nbsp;This is a first step of larger project. <br /><br />
+    1.&nbsp;&nbsp;User Sign up and Login ( along with Facebook and Twitter)<br />
+    2. User Profile Page with edit option along my list, change profile,&nbsp;&nbsp;change password<br />
+    3. Create a Product Listing by user including image upload along with Edit and Delete function <br />
+    4. A Product List Page with filtering options ( paginated) <br />
+    5. Admin module with option to add/edit/delete a product listing, add/delete users, tag a product listing as featured, add product category options<br />
+    6. Home Page with Search option, featured product, category of products with link to the list of the products.&nbsp;&nbsp;<br /><br />
+    These are the requirements of Phase 1 of this multiple phases of this product.&nbsp;&nbsp;Design themes shall be provided.<br /><br /><b>Budget</b>: $30
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Skills</b>:        AJAX,                     Facebook Development,                     HTML5,                     JavaScript,                     jQuery,                     PHP,                     SQL            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Listing-Web-App-using-PHP_%7E01dbdb8879c716ad9f?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:26:05 +0000</pubDate><guid>https://www.upwork.com/jobs/Listing-Web-App-using-PHP_%7E01dbdb8879c716ad9f?source=rss</guid></item><item><title><![CDATA[Web/mobile Frontend designer - Upwork]]></title><link>https://www.upwork.com/jobs/Web-mobile-Frontend-designer_%7E019d1826f66373a195?source=rss</link><description><![CDATA[Looking for a long-term frontend designer to work on the platform. <br />
+    You will also need to work on a mobile app design in the future.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web &amp; Mobile Design
+    <br /><b>Skills</b>:        Adobe Photoshop,                     Graphic Design,                     Web Design            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Web-mobile-Frontend-designer_%7E019d1826f66373a195?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Looking for a long-term frontend designer to work on the platform. <br />
+    You will also need to work on a mobile app design in the future.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web &amp; Mobile Design
+    <br /><b>Skills</b>:        Adobe Photoshop,                     Graphic Design,                     Web Design            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Web-mobile-Frontend-designer_%7E019d1826f66373a195?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:25:20 +0000</pubDate><guid>https://www.upwork.com/jobs/Web-mobile-Frontend-designer_%7E019d1826f66373a195?source=rss</guid></item><item><title><![CDATA[Interpreter for business trip (Yangon) - Upwork]]></title><link>https://www.upwork.com/jobs/Interpreter-for-business-trip-Yangon_%7E015ce292860db78fdb?source=rss</link><description><![CDATA[Interpreter for a market research trip in Yangon will need to interact with local businesses and stakeholders. Fluency in Burmese and English essential, Chinese a plus.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Translation &gt; General Translation
+    <br /><b>Skills</b>:        English Grammar,                     English Spelling,                     Translation Malay English            <br /><b>Country</b>: Hong Kong<br /><a href="https://www.upwork.com/jobs/Interpreter-for-business-trip-Yangon_%7E015ce292860db78fdb?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Interpreter for a market research trip in Yangon will need to interact with local businesses and stakeholders. Fluency in Burmese and English essential, Chinese a plus.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Translation &gt; General Translation
+    <br /><b>Skills</b>:        English Grammar,                     English Spelling,                     Translation Malay English            <br /><b>Country</b>: Hong Kong<br /><a href="https://www.upwork.com/jobs/Interpreter-for-business-trip-Yangon_%7E015ce292860db78fdb?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:24:12 +0000</pubDate><guid>https://www.upwork.com/jobs/Interpreter-for-business-trip-Yangon_%7E015ce292860db78fdb?source=rss</guid></item><item><title><![CDATA[Storyteller, Email Marketer, and Creative Copywriter for a Christian eCommerce Site - Upwork]]></title><link>https://www.upwork.com/jobs/Storyteller-Email-Marketer-and-Creative-Copywriter-for-Christian-eCommerce-Site_%7E01607b7bf42a2b43a4?source=rss</link><description><![CDATA[Hi all!<br /><br />
+    I&#039;m looking to hire a creative copywriter/email marketer for my website. Jobs include creative writing for the website, product descriptions, and emails.<br /><br />
+    This is for a Christian ecommerce company (jewelry, clothing, etc). You MUST have experience in brand storytelling and email marketing.<br /><br />
+    I&#039;ll supply more information to individuals who fit my requirements.<br /><br /><b>Budget</b>: $1,000
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Creative Writing
+    <br /><b>Skills</b>:        Brand Marketing,                     Creative Writing,                     Email Marketing            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Storyteller-Email-Marketer-and-Creative-Copywriter-for-Christian-eCommerce-Site_%7E01607b7bf42a2b43a4?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Hi all!<br /><br />
+    I&#039;m looking to hire a creative copywriter/email marketer for my website. Jobs include creative writing for the website, product descriptions, and emails.<br /><br />
+    This is for a Christian ecommerce company (jewelry, clothing, etc). You MUST have experience in brand storytelling and email marketing.<br /><br />
+    I&#039;ll supply more information to individuals who fit my requirements.<br /><br /><b>Budget</b>: $1,000
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Creative Writing
+    <br /><b>Skills</b>:        Brand Marketing,                     Creative Writing,                     Email Marketing            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Storyteller-Email-Marketer-and-Creative-Copywriter-for-Christian-eCommerce-Site_%7E01607b7bf42a2b43a4?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:24:02 +0000</pubDate><guid>https://www.upwork.com/jobs/Storyteller-Email-Marketer-and-Creative-Copywriter-for-Christian-eCommerce-Site_%7E01607b7bf42a2b43a4?source=rss</guid></item><item><title><![CDATA[writing press release for tech - Upwork]]></title><link>https://www.upwork.com/jobs/writing-press-release-for-tech_%7E01c3c4b19b920eac30?source=rss</link><description><![CDATA[to create pre&amp;amp;post press release for tech media in English, Malay and Chinese language. Topic related to smart logistic, sharing economy and machine learning.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Web Content
+    <br /><b>Skills</b>:        Cantonese,                     Content Writing,                     Online Writing,                     Translation English Chinese,                     Translation English Malay            <br /><b>Country</b>: Malaysia<br /><a href="https://www.upwork.com/jobs/writing-press-release-for-tech_%7E01c3c4b19b920eac30?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[to create pre&amp;amp;post press release for tech media in English, Malay and Chinese language. Topic related to smart logistic, sharing economy and machine learning.<br /><br /><br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Writing &gt; Web Content
+    <br /><b>Skills</b>:        Cantonese,                     Content Writing,                     Online Writing,                     Translation English Chinese,                     Translation English Malay            <br /><b>Country</b>: Malaysia<br /><a href="https://www.upwork.com/jobs/writing-press-release-for-tech_%7E01c3c4b19b920eac30?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:23:23 +0000</pubDate><guid>https://www.upwork.com/jobs/writing-press-release-for-tech_%7E01c3c4b19b920eac30?source=rss</guid></item><item><title><![CDATA[Looking for someone to create a digital mock up of our overnight retreat. - Upwork]]></title><link>https://www.upwork.com/jobs/Looking-for-someone-create-digital-mock-our-overnight-retreat_%7E015cb04ae04b66fafe?source=rss</link><description><![CDATA[Weŕe looking for someone to create one illustration that would show people the layout of a small retreat we have planned. It would include a parking lot, 4 small structures, and layout of the grounds (fireplace, walkway, etc). Ive attached two images found online along the style of what we would want. Something 3D like the layout of the city example but with more details and less cartoonish like the picture of the victorian house. Were going to use the image to show our cities zoning committee our vision for the property. <br />
+    Thanks!<br /><br /><b>Budget</b>: $10
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Design &amp; Creative &gt; Other - Design &amp; Creative
+    <br /><b>Skills</b>:        3D Design,                     3D Modeling,                     3D Rendering,                     Digital Illustration            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Looking-for-someone-create-digital-mock-our-overnight-retreat_%7E015cb04ae04b66fafe?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[Weŕe looking for someone to create one illustration that would show people the layout of a small retreat we have planned. It would include a parking lot, 4 small structures, and layout of the grounds (fireplace, walkway, etc). Ive attached two images found online along the style of what we would want. Something 3D like the layout of the city example but with more details and less cartoonish like the picture of the victorian house. Were going to use the image to show our cities zoning committee our vision for the property. <br />
+    Thanks!<br /><br /><b>Budget</b>: $10
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Design &amp; Creative &gt; Other - Design &amp; Creative
+    <br /><b>Skills</b>:        3D Design,                     3D Modeling,                     3D Rendering,                     Digital Illustration            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Looking-for-someone-create-digital-mock-our-overnight-retreat_%7E015cb04ae04b66fafe?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:21:48 +0000</pubDate><guid>https://www.upwork.com/jobs/Looking-for-someone-create-digital-mock-our-overnight-retreat_%7E015cb04ae04b66fafe?source=rss</guid></item><item><title><![CDATA[Attach Media Files to Webpages - Upwork]]></title><link>https://www.upwork.com/jobs/Attach-Media-Files-Webpages_%7E0196635cfe1888d7db?source=rss</link><description><![CDATA[We have about 3000 media files in our WP site that need to be attached to specific pages. Please let me know how long it will take you to complete and at what cost.<br /><br /><b>Budget</b>: $100
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Skills</b>:        WordPress            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Attach-Media-Files-Webpages_%7E0196635cfe1888d7db?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[We have about 3000 media files in our WP site that need to be attached to specific pages. Please let me know how long it will take you to complete and at what cost.<br /><br /><b>Budget</b>: $100
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Web, Mobile &amp; Software Dev &gt; Web Development
+    <br /><b>Skills</b>:        WordPress            <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Attach-Media-Files-Webpages_%7E0196635cfe1888d7db?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:21:47 +0000</pubDate><guid>https://www.upwork.com/jobs/Attach-Media-Files-Webpages_%7E0196635cfe1888d7db?source=rss</guid></item><item><title><![CDATA[Looking for An Experience Lead Generation Specialist to create a potential client list for PR Firm - Upwork]]></title><link>https://www.upwork.com/jobs/Looking-for-Experience-Lead-Generation-Specialist-create-potential-client-list-for-Firm_%7E01fefeefa55ceabb46?source=rss</link><description><![CDATA[I need someone to help me create a list of 35-50 independent companies in the beauty industry that generate a revenue between $350,000-2 million per year and interested in retaining a publicist for their service/product<br /><br /><b>Budget</b>: $35
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Sales &amp; Marketing &gt; Lead Generation
+    <br /><b>Skills</b>:        Administrative Support,                     Lead Generation,                     Sales            <br /><b>Location Requirement</b>: Only freelancers located in the United States may apply.
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Looking-for-Experience-Lead-Generation-Specialist-create-potential-client-list-for-Firm_%7E01fefeefa55ceabb46?source=rss">click to apply</a>]]></description><content:encoded><![CDATA[I need someone to help me create a list of 35-50 independent companies in the beauty industry that generate a revenue between $350,000-2 million per year and interested in retaining a publicist for their service/product<br /><br /><b>Budget</b>: $35
+    <br /><b>Posted On</b>: January 16, 2018 06:41 UTC<br /><b>Category</b>: Sales &amp; Marketing &gt; Lead Generation
+    <br /><b>Skills</b>:        Administrative Support,                     Lead Generation,                     Sales            <br /><b>Location Requirement</b>: Only freelancers located in the United States may apply.
+    <br /><b>Country</b>: United States<br /><a href="https://www.upwork.com/jobs/Looking-for-Experience-Lead-Generation-Specialist-create-potential-client-list-for-Firm_%7E01fefeefa55ceabb46?source=rss">click to apply</a>]]></content:encoded><pubDate>Tue, 16 Jan 2018 06:21:29 +0000</pubDate><guid>https://www.upwork.com/jobs/Looking-for-Experience-Lead-Generation-Specialist-create-potential-client-list-for-Firm_%7E01fefeefa55ceabb46?source=rss</guid></item></channel></rss>
     """
 
     var xml: XMLIndexer?
@@ -69,204 +312,24 @@ class XMLParsingTests: XCTestCase {
         xml = SWXMLHash.parse(xmlToParse)
     }
 
-    func testShouldBeAbleToParseIndividualElements() {
-        XCTAssertEqual(xml!["root"]["header"]["title"].element?.text, "Test Title Header")
-    }
-
-    func testShouldBeAbleToParseElementGroups() {
-        XCTAssertEqual(xml!["root"]["catalog"]["book"][1]["author"].element?.text, "Ralls, Kim")
-    }
-
-    func testShouldBeAbleToParseElementGroupsByIndex() {
-        XCTAssertEqual(try xml!["root"]["catalog"]["book"].byIndex(1)["author"].element?.text, "Ralls, Kim")
-    }
-
-    func testShouldBeAbleToByIndexWithoutGoingOutOfBounds() {
-        XCTAssertEqual(try xml!["root"]["catalog"]["book"].byIndex(3)["author"].element?.text, nil)
-    }
-
-    func testShouldBeAbleToParseAttributes() {
-        XCTAssertEqual(xml!["root"]["catalog"]["book"][1].element?.attribute(by: "id")?.text, "bk102")
-    }
-
-    func testShouldBeAbleToLookUpElementsByNameAndAttribute() {
-        do {
-            let value = try xml!["root"]["catalog"]["book"].withAttribute("id", "bk102")["author"].element?.text
-            XCTAssertEqual(value, "Ralls, Kim")
-        } catch {
-            XCTFail("\(error)")
-        }
-    }
-
-    func testShouldBeAbleToLookUpElementsByNameAndAttributeCaseInsensitive() {
-        do {
-            let xmlInsensitive = SWXMLHash.config({ (config) in
-                config.caseInsensitive = true
-            }).parse(xmlToParse)
-            let value = try xmlInsensitive["rOOt"]["catalOg"]["bOOk"].withAttribute("iD", "Bk102")["authOr"].element?.text
-            XCTAssertEqual(value, "Ralls, Kim")
-        } catch {
-            XCTFail("\(error)")
-        }
-    }
-
-    func testShouldBeAbleToIterateElementGroups() {
-        let result = xml!["root"]["catalog"]["book"].all.map({ $0["genre"].element!.text }).joined(separator: ", ")
-        XCTAssertEqual(result, "Computer, Fantasy, Fantasy")
-    }
-
-    func testShouldBeAbleToIterateElementGroupsEvenIfOnlyOneElementIsFound() {
-        XCTAssertEqual(xml!["root"]["header"]["title"].all.count, 1)
-    }
-
-    func testShouldBeAbleToIndexElementGroupsEvenIfOnlyOneElementIsFound() {
-        XCTAssertEqual(xml!["root"]["header"]["title"][0].element?.text, "Test Title Header")
-    }
-
-    func testShouldBeAbleToIterateUsingForIn() {
-        var count = 0
-        for _ in xml!["root"]["catalog"]["book"].all {
-            count += 1
-        }
-
-        XCTAssertEqual(count, 3)
-    }
-
-    func testShouldBeAbleToEnumerateChildren() {
-        let result = xml!["root"]["catalog"]["book"][0].children.map({ $0.element!.name }).joined(separator: ", ")
-        XCTAssertEqual(result, "author, title, genre, price, publish_date, description")
-    }
-
-    func testShouldBeAbleToHandleMixedContent() {
-        XCTAssertEqual(xml!["root"]["header"].element?.text, "header mixed contentmore mixed content")
-    }
-
-    func testShouldBeAbleToIterateOverMixedContent() {
-        let mixedContentXml = "<html><body><p>mixed content <i>iteration</i> support</body></html>"
-        let parsed = SWXMLHash.parse(mixedContentXml)
-        let element = parsed["html"]["body"]["p"].element
-        XCTAssertNotNil(element)
-        if let element = element {
-            let result = element.children.reduce("") { acc, child in
-                switch child {
-                case let elm as SWXMLHash.XMLElement:
-                    let text = elm.text
-                    return acc + text
-                case let elm as TextElement:
-                    return acc + elm.text
-                default:
-                    XCTAssert(false, "Unknown element type")
-                    return acc
-                }
-            }
-
-            XCTAssertEqual(result, "mixed content iteration support")
-        }
-    }
-
-    func testShouldBeAbleToRecursiveOutputTextContent() {
-        let mixedContentXmlInputs = [
-            // From SourceKit cursor info key.annotated_decl
-            "<Declaration>typealias SomeHandle = <Type usr=\"s:Su\">UInt</Type></Declaration>",
-            "<Declaration>var points: [<Type usr=\"c:objc(cs)Location\">Location</Type>] { get set }</Declaration>",
-            // From SourceKit cursor info key.fully_annotated_decl
-            "<decl.typealias><syntaxtype.keyword>typealias</syntaxtype.keyword> <decl.name>SomeHandle</decl.name> = <ref.struct usr=\"s:Su\">UInt</ref.struct></decl.typealias>",
-            "<decl.var.instance><syntaxtype.keyword>var</syntaxtype.keyword> <decl.name>points</decl.name>: <decl.var.type>[<ref.class usr=\"c:objc(cs)Location\">Location</ref.class>]</decl.var.type> { <syntaxtype.keyword>get</syntaxtype.keyword> <syntaxtype.keyword>set</syntaxtype.keyword> }</decl.var.instance>",
-            "<decl.function.method.instance><syntaxtype.keyword>fileprivate</syntaxtype.keyword> <syntaxtype.keyword>func</syntaxtype.keyword> <decl.name>documentedMemberFunc</decl.name>()</decl.function.method.instance>"
-        ]
-
-        let recursiveTextOutputs = [
-            "typealias SomeHandle = UInt",
-            "var points: [Location] { get set }",
-
-            "typealias SomeHandle = UInt",
-            "var points: [Location] { get set }",
-            "fileprivate func documentedMemberFunc()"
-        ]
-
-        for (index, mixedContentXml) in mixedContentXmlInputs.enumerated() {
-            XCTAssertEqual(SWXMLHash.parse(mixedContentXml).element!.recursiveText, recursiveTextOutputs[index])
-        }
-    }
-
-    func testShouldHandleInterleavingXMLElements() {
-        let interleavedXml = "<html><body><p>one</p><div>two</div><p>three</p><div>four</div></body></html>"
-        let parsed = SWXMLHash.parse(interleavedXml)
-
-        let result = parsed["html"]["body"].children.map({ $0.element!.text }).joined(separator: ", ")
-        XCTAssertEqual(result, "one, two, three, four")
-    }
-
-    func testShouldBeAbleToProvideADescriptionForTheDocument() {
-        let descriptionXml = "<root><foo><what id=\"myId\">puppies</what></foo></root>"
-        let parsed = SWXMLHash.parse(descriptionXml)
-
-        XCTAssertEqual(parsed.description, "<root><foo><what id=\"myId\">puppies</what></foo></root>")
-    }
-
-    // error handling
-
-    func testShouldReturnNilWhenKeysDontMatch() {
-        XCTAssertNil(xml!["root"]["what"]["header"]["foo"].element?.name)
-    }
-
-    func testShouldProvideAnErrorObjectWhenKeysDontMatch() {
-        var err: IndexingError?
-        defer {
-            XCTAssertNotNil(err)
-        }
-        do {
-            _ = try xml!.byKey("root").byKey("what").byKey("header").byKey("foo")
-        } catch let error as IndexingError {
-            err = error
-        } catch { err = nil }
-    }
-
-    func testShouldProvideAnErrorElementWhenIndexersDontMatch() {
-        var err: IndexingError?
-        defer {
-            XCTAssertNotNil(err)
-        }
-        do {
-            _ = try xml!.byKey("what").byKey("subelement").byIndex(5).byKey("nomatch")
-        } catch let error as IndexingError {
-            err = error
-        } catch { err = nil }
-    }
-
-    func testShouldStillReturnErrorsWhenAccessingViaSubscripting() {
-        var err: IndexingError? = nil
-        switch xml!["what"]["subelement"][5]["nomatch"] {
-        case .xmlError(let error):
-            err = error
-        default:
-            err = nil
-        }
-        XCTAssertNotNil(err)
+    func test1() {
+        let rssChannel = xml!["rss"]["channel"]
+        // Selecting the first item from the RSS channel.
+        let item = rssChannel.children.flatMap({ $0 }).filter({ $0.element?.name == "item" }).first
+        // Getting all the fields of the item.
+        let fields = item!.children.flatMap({ $0.element })
+        // Get `description` field.
+        let titleField = fields.first(where: { $0.name == "title" })
+        // Description field should not be empty
+        print(titleField!.text)
+        XCTAssert(titleField!.text.isEmpty == false)
     }
 }
 
 extension XMLParsingTests {
     static var allTests: [(String, (XMLParsingTests) -> () throws -> Void)] {
         return [
-            ("testShouldBeAbleToParseIndividualElements", testShouldBeAbleToParseIndividualElements),
-            ("testShouldBeAbleToParseElementGroups", testShouldBeAbleToParseElementGroups),
-            ("testShouldBeAbleToParseAttributes", testShouldBeAbleToParseAttributes),
-            ("testShouldBeAbleToLookUpElementsByNameAndAttribute", testShouldBeAbleToLookUpElementsByNameAndAttribute),
-            ("testShouldBeAbleToIterateElementGroups", testShouldBeAbleToIterateElementGroups),
-            ("testShouldBeAbleToIterateElementGroupsEvenIfOnlyOneElementIsFound", testShouldBeAbleToIterateElementGroupsEvenIfOnlyOneElementIsFound),
-            ("testShouldBeAbleToIndexElementGroupsEvenIfOnlyOneElementIsFound", testShouldBeAbleToIndexElementGroupsEvenIfOnlyOneElementIsFound),
-            ("testShouldBeAbleToIterateUsingForIn", testShouldBeAbleToIterateUsingForIn),
-            ("testShouldBeAbleToEnumerateChildren", testShouldBeAbleToEnumerateChildren),
-            ("testShouldBeAbleToHandleMixedContent", testShouldBeAbleToHandleMixedContent),
-            ("testShouldBeAbleToIterateOverMixedContent", testShouldBeAbleToIterateOverMixedContent),
-            ("testShouldBeAbleToRecursiveOutputTextContent", testShouldBeAbleToRecursiveOutputTextContent),
-            ("testShouldHandleInterleavingXMLElements", testShouldHandleInterleavingXMLElements),
-            ("testShouldBeAbleToProvideADescriptionForTheDocument", testShouldBeAbleToProvideADescriptionForTheDocument),
-            ("testShouldReturnNilWhenKeysDontMatch", testShouldReturnNilWhenKeysDontMatch),
-            ("testShouldProvideAnErrorObjectWhenKeysDontMatch", testShouldProvideAnErrorObjectWhenKeysDontMatch),
-            ("testShouldProvideAnErrorElementWhenIndexersDontMatch", testShouldProvideAnErrorElementWhenIndexersDontMatch),
-            ("testShouldStillReturnErrorsWhenAccessingViaSubscripting", testShouldStillReturnErrorsWhenAccessingViaSubscripting)
+            ("test1", test1)
         ]
     }
 }
